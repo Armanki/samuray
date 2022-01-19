@@ -1,3 +1,6 @@
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_TEXT = "OPDATE-NEW-POST-TEXT";
+
 let store = {
     _callSubscriber() {
         console.log("state changed");
@@ -53,4 +56,6 @@ let store = {
         }
     }
 }
+ export let addPostActionCreator = () => ({type: ADD_POST})
+ export let opdateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
 export default store;
