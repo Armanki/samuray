@@ -5,11 +5,13 @@ import React from "react";
 const MyPosts = (props) => {
     let newPosrElement = React.createRef()
     let addPost = () => {
-        props.addPost();
+        props.dispatch({type:"ADD-POST"});
     }
     let onPostChange = () => {
         let text = newPosrElement.current.value;
-        props.opdateNewPostText(text)
+        let action = {type:"OPDATE-NEW-POST-TEXT", newText: text};
+        props.dispatch(action)
+
     }
 
     let postsElements = props.posts.map(p => (<Post message={p.message} likesCount={p.likesCount}/>))
@@ -19,8 +21,7 @@ const MyPosts = (props) => {
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea onChange={onPostChange}
-                              ref={newPosrElement}
+                    <textarea onChange={onPostChange} ref={newPosrElement}
                               value={props.newPostText}/>
                 </div>
                 <div>
