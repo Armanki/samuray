@@ -3,12 +3,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import store from "./Redux/state";
+import {BrowserRouter} from "react-router-dom";
 
 export let rerenderEntireTree = (state) => {
     ReactDOM.render(
-        <React.StrictMode>
-            <App state={state} dispatch={store.dispatch.bind(store)}/>
-        </React.StrictMode>,
+        <BrowserRouter>
+            <React.StrictMode>
+                <App state={state} dispatch={store.dispatch.bind(store)} store={store}/>
+            </React.StrictMode>,
+        </BrowserRouter>,
         document.getElementById('root')
     );
 }

@@ -1,5 +1,6 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "OPDATE-NEW-POST-TEXT";
+import dialogsReduser from "./dialogs-reducer";
+import profileReduser from "./profile-reducer";
+import sidebarReduser from "./sidebar-reducer";
 
 let store = {
     _callSubscriber() {
@@ -21,7 +22,8 @@ let store = {
                 {id: 3, message: "yey"},
                 {id: 4, message: "yey"},
                 {id: 5, message: "yey"}
-            ]
+            ],
+            newMessageBody: "",
         },
         profilePage: {
             posts: [
@@ -30,7 +32,8 @@ let store = {
                 {id: 3, message: "hi", likesCount: 15}
             ],
             newPostText: "Arman"
-        }
+        },
+        sidebar: {}
     },
 
     subscribe(observer) {
@@ -41,21 +44,14 @@ let store = {
     },
 
     dispatch(action) {
-        if(action.type === "ADD-POST"){
-            let newPost = {
-                id: 4,
-                message: this._state.profilePage.newPostText,
-                likesCount: 0
-            };
-            this._state.profilePage.posts.push(newPost);
-            this._state.profilePage.newPostText = "";
-            this._callSubscriber(this._state)
-        }else if (action.type === "OPDATE-NEW-POST-TEXT"){
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        }
+
+        this._state.profilePage = profileReduser(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReduser(this._state.dialogsPage, action);
+        this._state.sidebar = sidebarReduser(this._state.sidebar, action);
+        this._callSubscriber(this._state);
     }
 }
- export let addPostActionCreator = () => ({type: ADD_POST})
- export let opdateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
+
+
+
 export default store;

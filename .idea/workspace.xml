@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e0acc3e-3194-41d1-8217-06a87bb12bfc" name="Changes" comment="">
+    <list default="true" id="6e0acc3e-3194-41d1-8217-06a87bb12bfc" name="Changes" comment="reducer">
+      <change afterPath="$PROJECT_DIR$/src/Redux/dialogs-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/profile-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/sidebar-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Redux" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -70,11 +76,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\АРМАН\IdeaProjects\samuray\src\Redux" />
       <recent name="C:\Users\АРМАН\IdeaProjects\samuray\src" />
       <recent name="C:\Users\АРМАН\IdeaProjects\samuray\src\components\Dialogs\Message" />
       <recent name="C:\Users\АРМАН\IdeaProjects\samuray\src\components\Dialogs\DialogItem" />
       <recent name="C:\Users\АРМАН\IdeaProjects\samuray\src\components\Profile\ProfileInfo" />
-      <recent name="C:\Users\АРМАН\IdeaProjects\samuray\src\components\Settings" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\АРМАН\IdeaProjects\samuray\src\components\Profile" />
@@ -93,7 +99,7 @@
       <updated>1642064335944</updated>
       <workItem from="1642064337282" duration="10370000" />
       <workItem from="1642095741723" duration="54627000" />
-      <workItem from="1642572336186" duration="6032000" />
+      <workItem from="1642572336186" duration="19286000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1642096136263</created>
@@ -172,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642585746245</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="action creator, action type">
+      <created>1642589358025</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1642589358025</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +202,7 @@
     <MESSAGE value="FLUX concepts" />
     <MESSAGE value="FLUX circle of the word symbol:" />
     <MESSAGE value="Dispatch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dispatch" />
+    <MESSAGE value="action creator, action type" />
+    <option name="LAST_COMMIT_MESSAGE" value="action creator, action type" />
   </component>
 </project>
