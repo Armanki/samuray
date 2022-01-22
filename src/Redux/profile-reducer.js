@@ -1,21 +1,33 @@
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_TEXT = "OPDATE-NEW-POST-TEXT";
 
+let initialState = {
+    posts: [
+        {id: 1, message: "hi how are you", likesCount: 35},
+        {id: 2, message: "it's my first react", likesCount: 45},
+        {id: 3, message: "hi", likesCount: 15}
+    ],
+    newPostText: "Arman"
+}
 
-const profileReducer = (state, action) => {
+const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD-POST":
             let newPost = {
                 id: 4,
                 message: state.newPostText,
                 likesCount: 0
+            }
+          return  {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: ""
             };
-            state.posts.push(newPost)
-            state.newPostText = "";
-            return state;
         case "OPDATE-NEW-POST-TEXT":
-            state.newPostText = action.newText;
-            return state;
+            let stateCopy = {
+                ...state,
+                newPostText: action.newText
+            };
         default:
             return state;
     }
