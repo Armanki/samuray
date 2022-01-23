@@ -24,7 +24,7 @@ const profileReducer = (state = initialState, action) => {
                 newPostText: ""
             };
         case "OPDATE-NEW-POST-TEXT":
-            let stateCopy = {
+            return  {
                 ...state,
                 newPostText: action.newText
             };
@@ -32,7 +32,7 @@ const profileReducer = (state = initialState, action) => {
             return state;
     }
 }
-export let addPostActionCreator = () => ({type: ADD_POST});
-export let opdateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
+export const addPostActionCreator = () => ({type: ADD_POST});
+export const opdateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
 
 export default profileReducer;

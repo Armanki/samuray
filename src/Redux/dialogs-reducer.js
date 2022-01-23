@@ -39,8 +39,8 @@ const dialogsReducer = (state = initialState, action) => {
             return state;
     }
 }
-export let sendMessageCreator = () => ({type: SEND_MESSAGE});
-export let opdateNewMessageBodyCreator = (body) => ({type: UPDATE_NEW_MESSAGE_BODY, body: body});
+export const sendMessageCreator = () => ({type: SEND_MESSAGE});
+export const opdateNewMessageBodyCreator = (body) => ({type: UPDATE_NEW_MESSAGE_BODY, body: body});
 
 
 export default dialogsReducer;
