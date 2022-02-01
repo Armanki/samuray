@@ -9,6 +9,7 @@ import Settinds from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import {BrowserRouter, Route} from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer";
+import LoginPage from "./components/Login/Login";
 
 const App = (props) => {
     return (
@@ -23,6 +24,7 @@ const App = (props) => {
                     <Route path="/music" render={() => <Music/>}/>
                     <Route path="/settings" render={() => <Settinds/>}/>
                     <Route path="/users" render={() => <UsersContainer />}/>
+                    <Route path="/login" render={() => <LoginPage />}/>
                 </div>
             </div>
 
